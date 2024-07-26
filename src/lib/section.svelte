@@ -3,6 +3,6 @@
 	export let text = '';
 </script>
 
-<div class={`w-[100vw] h-[100vh] px-4 py-2 ${background} ${text}`}>
+<div class={`w-[100vw] h-[100vh] relative ${background} ${text}`}>
 	<slot />
 </div>

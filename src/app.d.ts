@@ -9,5 +9,6 @@ declare global {
 		// interface Platform {}
 	}
 }
+declare module 'generate-random-emoji';
 
 export {};
