@@ -13,7 +13,7 @@
 		<h1 class="tanker text-5xl md:text-9xl">ross cournoyer</h1>
 		<p class="satoshi-bold text-xl md:text-5xl">Very good web developer</p>
 	</div>
-	<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 emoji-sprayer">
+	<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
 		<EmojiField />
 		<EmojiField />
 		<EmojiField />

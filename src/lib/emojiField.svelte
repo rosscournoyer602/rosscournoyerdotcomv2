@@ -11,15 +11,8 @@
 	}
 
 	function destination() {
-		console.log('IH', innerHeight);
-		console.log('IW', innerWidth);
-		const left = Math.ceil(Math.random() * innerHeight) * (Math.round(Math.random()) ? 1 : -1);
-		const top = Math.ceil(Math.random() * innerWidth) * (Math.round(Math.random()) ? 1 : -1);
-		// const left =
-		// 	Math.random() * (1500 - innerWidth / 2) + innerWidth * (Math.round(Math.random()) ? 1 : -1);
-		// const top =
-		// 	Math.random() * (1000 - innerHeight / 2) + innerHeight * (Math.round(Math.random()) ? 1 : -1);
-		console.log([`${left}px`, `${top}px`]);
+		const left = Math.ceil(Math.random() * innerWidth) * (Math.round(Math.random()) ? 1 : -1);
+		const top = Math.ceil(Math.random() * innerHeight) * (Math.round(Math.random()) ? 1 : -1);
 		return [`${left}px`, `${top}px`];
 	}
 
