@@ -19,9 +19,13 @@
 		}
 
 		setTimeout(() => {
-			component.$destroy();
+			destroySelf();
 		}, 15000);
 	});
+
+	function destroySelf() {
+		component.$destroy();
+	}
 </script>
 
 <div

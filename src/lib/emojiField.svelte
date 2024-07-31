@@ -2,9 +2,12 @@
 	import { onMount } from 'svelte';
 	import randomEmoji from 'generate-random-emoji';
 	import Emoji from './emoji.svelte';
+	import { nanoid } from 'nanoid';
 
 	let innerWidth = 0;
 	let innerHeight = 0;
+	let id = nanoid();
+	export let doEmojis = true;
 
 	function emoji() {
 		return randomEmoji.generateEmojis(1)[0].image;
@@ -17,12 +20,15 @@
 	}
 
 	onMount(() => {
-		const el = document.getElementById('emoji-cannon') as Element;
-		const emojiCreateInterval = setInterval(() => {
-			const newEmoji = new Emoji({
-				target: el,
-				props: { emoji: emoji(), destination: destination() }
-			});
+		const el = document.getElementById(id) as Element;
+		setInterval(() => {
+			if (doEmojis) {
+				// todo: consider filtering out certain emojis
+				new Emoji({
+					target: el,
+					props: { emoji: emoji(), destination: destination() }
+				});
+			}
 		}, 500);
 	});
 </script>
@@ -30,6 +36,6 @@
 <svelte:window bind:innerWidth bind:innerHeight />
 
 <div
-	id="emoji-cannon"
-	class="absolute top-1/2 left-2/3 -translate-x-1/2 -translate-y-1/2 text-6xl"
+	{id}
+	class="absolute top-1/2 left-2/3 -translate-x-1/2 -translate-y-1/2 text-4xl md:text-6xl"
 ></div>
