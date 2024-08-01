@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	background-color: black;
+}
 body {
 	width: 100vw;
 	height: 100vh;
+	position: relative;
 	overflow-x: hidden;
 	overflow-y: auto;
 }
@@ -53,4 +57,17 @@ body {
 
 .satoshi-regular {
 	font-family: satoshi-bold;
+}
+
+.absolute-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.sticky-center {
+	position: sticky;
+	top: 0;
+	margin: 0px auto 0px auto;
 }

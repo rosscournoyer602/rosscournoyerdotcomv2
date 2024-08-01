@@ -35,7 +35,4 @@
 
 <svelte:window bind:innerWidth bind:innerHeight />
 
-<div
-	{id}
-	class="absolute top-1/2 left-2/3 -translate-x-1/2 -translate-y-1/2 text-4xl md:text-6xl"
-></div>
+<div {id} class="text-4xl md:text-6xl"></div>

@@ -36,6 +36,7 @@
 	"type": "module",
 	"dependencies": {
 		"generate-random-emoji": "^1.0.2",
-		"nanoid": "^5.0.7"
+		"nanoid": "^5.0.7",
+		"svelte-intersection-observer": "^1.0.0"
 	}
 }

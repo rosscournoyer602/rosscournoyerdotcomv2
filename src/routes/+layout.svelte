@@ -1,11 +1,9 @@
 <script>
+	import Header from '$lib/header.svelte';
 	import '../app.css';
 </script>
 
-<div>
-	<!-- header -->
-	<!-- nav -->
-	<main>
-		<slot />
-	</main>
-</div>
+<Header />
+<main>
+	<slot />
+</main>
