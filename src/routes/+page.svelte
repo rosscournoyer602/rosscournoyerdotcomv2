@@ -1,24 +1,8 @@
 <script lang="ts">
 	import Section from '$lib/section.svelte';
-	import EmojiField from '$lib/emojiField.svelte';
 	import colorSchemes from '$lib/colorSchemes';
-	import IntersectionObserver from 'svelte-intersection-observer';
-	import { showHeader } from '$lib/stores';
-
+	import TitleSectionContent from '$lib/titleSectionContent.svelte';
 	let mode = 'dark' as keyof typeof colorSchemes;
-	let doEmojis = true;
-	let titleElement: HTMLElement;
-	let titleIntersecting: boolean;
-
-	function handleTitleIntersect() {
-		if (titleIntersecting) {
-			doEmojis = true;
-			showHeader.set(false);
-		} else {
-			doEmojis = false;
-			showHeader.set(true);
-		}
-	}
 </script>
 
 <Section
@@ -26,24 +10,7 @@
 	background={colorSchemes[mode].blue.background}
 	text={colorSchemes[mode].blue.text}
 >
-	<IntersectionObserver
-		element={titleElement}
-		bind:intersecting={titleIntersecting}
-		on:observe={handleTitleIntersect}
-	>
-		<div
-			bind:this={titleElement}
-			class={`w-[360px] ${colorSchemes[mode].blue.background} absolute-center shadow-hero z-10 rounded-xl text-center md:w-[760px]`}
-		>
-			<h1 class="tanker text-6xl top-0 md:text-9xl">Ross Cournoyer</h1>
-			<p class="satoshi-bold text-2xl md:text-5xl">Very good web developer</p>
-		</div>
-	</IntersectionObserver>
-	<div class="absolute-center">
-		<EmojiField {doEmojis} />
-		<EmojiField {doEmojis} />
-		<EmojiField {doEmojis} />
-	</div>
+	<TitleSectionContent titleBgColor={colorSchemes[mode].blue.background} />
 </Section>
 <Section background={colorSchemes[mode].amber.background} text={colorSchemes[mode].amber.text}>
 	<div class="text-center">
