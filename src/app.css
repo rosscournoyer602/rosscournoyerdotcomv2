@@ -56,7 +56,7 @@ body {
 	padding-left: 3px;
 }
 
-@responsive {
+@layer utilities {
 	.absolute-center {
 		position: absolute;
 		top: 50%;
