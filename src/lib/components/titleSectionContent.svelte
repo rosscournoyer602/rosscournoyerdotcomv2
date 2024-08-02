@@ -1,7 +1,7 @@
 <script lang="ts">
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import { showHeader } from '$lib/stores';
-	import EmojiField from '$lib/emojiField.svelte';
+	import EmojiField from '$lib/components/emojiField.svelte';
 
 	let doEmojis = true;
 	let titleElement: HTMLElement;
