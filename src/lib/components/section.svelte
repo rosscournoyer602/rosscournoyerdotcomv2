@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { nanoid } from 'nanoid';
 	export let sectionId = nanoid();
 	export let background = '';
