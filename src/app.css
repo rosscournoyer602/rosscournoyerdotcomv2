@@ -53,7 +53,10 @@ body {
 
 .satoshi-bold {
 	font-family: satoshi-bold;
-	padding-left: 3px;
+}
+
+.satoshi-regular {
+	font-family: satoshi-regular;
 }
 
 @layer utilities {
