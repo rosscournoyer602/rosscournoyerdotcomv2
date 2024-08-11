@@ -3,6 +3,7 @@
 	import colorSchemes from '$lib/colorSchemes';
 	import TitleSectionContent from '$lib/components/titleSectionContent.svelte';
 	import BackgroundSectionChat from '$lib/components/backgroundSectionChat.svelte';
+	import Timeline from '$lib/components/timeline.svelte';
 	let mode = 'dark' as keyof typeof colorSchemes;
 </script>
 
@@ -20,10 +21,7 @@
 	/>
 </Section>
 <Section background={colorSchemes[mode].purple.background} text={colorSchemes[mode].purple.text}>
-	<div class="text-center">
-		<h2 class="tanker text-5xl md:text-7xl">Skills and work history</h2>
-		<p class="satoshi-bold text-xl md:text-3xl">Timeline?</p>
-	</div>
+	<Timeline />
 </Section>
 <Section background={colorSchemes[mode].red.background} text={colorSchemes[mode].red.text}>
 	<div class="text-center">
