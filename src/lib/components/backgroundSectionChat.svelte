@@ -59,7 +59,7 @@
 	}
 </script>
 
-<div class="px-4 py-4 text-center md:text-left">
+<div class="p-4 text-center md:text-left">
 	<h2 class="mb-8 tanker text-5xl md:text-7xl">BACKGROUND</h2>
 	<IntersectionObserver
 		element={chatElement}

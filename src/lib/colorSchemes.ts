@@ -9,8 +9,8 @@ export default {
 			text: 'text-yellow-400'
 		},
 		green: {
-			background: 'bg-lime-950',
-			text: 'text-green-400'
+			background: 'bg-cyan-200',
+			text: 'text-amber-700'
 		},
 		purple: {
 			background: 'bg-purple-950',

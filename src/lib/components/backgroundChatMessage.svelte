@@ -26,7 +26,11 @@
 </script>
 
 <div class={`w-full flex mb-4 ${layout === 'left' ? 'flex-row' : 'flex-row-reverse'}`}>
-	<img src={imageUrl} class="w-[64px] h-[64px] rounded-md self-end md:mx-0" alt={avatarAlt} />
+	<img
+		src={imageUrl}
+		class="w-[56px] h-[56px] md:w-[64px] md:h-[64px] rounded-md self-end md:mx-0"
+		alt={avatarAlt}
+	/>
 	<div
 		class={`h-full mx-2 px-3 py-2 rounded-lg self-end ${layout === 'left' ? 'rounded-bl-none' : 'rounded-br-none'} ${bgColor} md:max-w-[66%]`}
 	>
@@ -35,7 +39,7 @@
 		{:else}
 			<p
 				class={`text-justify ${txtColor} satoshi-bold text-lg md:text-2xl`}
-				transition:fade={{ duration: 300 }}
+				transition:fade={{ duration: 400 }}
 			>
 				{text}
 			</p>
