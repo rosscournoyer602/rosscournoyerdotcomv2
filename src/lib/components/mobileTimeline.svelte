@@ -1,30 +1,57 @@
-<script>
+<script lang="ts">
 	import { jobs, skills } from '$lib/copy';
-	import SkillMarquee from './skillMarquee.svelte';
+	import { onDestroy, onMount } from 'svelte';
 
 	let sortedJobs = jobs.sort((a, b) => b.order - a.order);
 	export let borderColor = '';
+	let interval: number;
+	let dancer: HTMLElement;
+
+	onMount(() => {
+		interval = setInterval(() => {
+			dancer.classList.toggle('flip');
+		}, 1000);
+	});
+
+	onDestroy(() => {
+		if (interval) {
+			clearInterval(interval);
+		}
+	});
 </script>
 
-<div class="h-full mt-4">
+<div class="h-full">
+	<h2 class="p-4 tanker text-5xl text-right md:text-7xl md:text-left">Work</h2>
 	<div>
 		<ul>
 			{#each sortedJobs as job}
-				<li class={`pl-10 pb-4 ${borderColor}`}>
-					<h3 class="tanker text-3xl">{job.company}</h3>
-					<p class="satoshi-bold text-xl">{job.title}</p>
-					<p class=" text-xl satoshi-regular">{job.dates}</p>
+				<li class={`ml-4 pb-2`}>
+					<a href={job.url} target="_blank">
+						<h3 class="satoshi-bold text-2xl">{job.company}</h3>
+					</a>
+					<p class="text-xl">{job.title}</p>
+					<p class="text-md satoshi-regular">{job.dates}</p>
 				</li>
 			{/each}
 		</ul>
 	</div>
-	<div class="mt-10 mx-10 satoshi-regular text-xl text-center">
-		<ul class="flex flex-wrap gap-2 content-start">
-			{#each skills as skill, index}
-				<li class={`min-w-1/3 h-8 pb-4 px-1 flex-auto rounded-md border ${borderColor}`}>
+	<div class="-mt-[25px] mx-2 flex justify-end">
+		<div class="w-[50px] text-5xl" bind:this={dancer}>🕺🏼</div>
+	</div>
+	<h2 class="px-4 tanker text-5xl text-right md:text-7xl md:text-left">Skills</h2>
+	<div class="p-4 satoshi-regular text-xl text-center">
+		<ul class="flex flex-wrap gap-2">
+			{#each skills as skill}
+				<li class={`min-w-1/3 h-8 pb-4 px-1 flex-auto self-start rounded-md border ${borderColor}`}>
 					<span>{skill}</span>
 				</li>
 			{/each}
 		</ul>
 	</div>
 </div>
+
+<style>
+	.flip {
+		transform: rotateY(180deg);
+	}
+</style>

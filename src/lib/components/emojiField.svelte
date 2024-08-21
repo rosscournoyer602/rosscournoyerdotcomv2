@@ -1,13 +1,15 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import randomEmoji from 'generate-random-emoji';
 	import Emoji from './emoji.svelte';
 	import { nanoid } from 'nanoid';
 
+	export let doEmojis = true;
+
 	let innerWidth = 0;
 	let innerHeight = 0;
 	let id = nanoid();
-	export let doEmojis = true;
+	let interval: number;
 
 	function emoji() {
 		return randomEmoji.generateEmojis(1)[0].image;
@@ -21,7 +23,7 @@
 
 	onMount(() => {
 		const el = document.getElementById(id) as Element;
-		setInterval(() => {
+		interval = setInterval(() => {
 			if (doEmojis) {
 				// todo: consider filtering out certain emojis
 				new Emoji({
@@ -30,6 +32,10 @@
 				});
 			}
 		}, 500);
+	});
+
+	onDestroy(() => {
+		clearInterval(interval);
 	});
 </script>
 

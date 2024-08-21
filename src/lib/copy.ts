@@ -3,43 +3,43 @@ export const jobs = [
 		order: 1,
 		company: 'IT-Consultis',
 		title: 'Front-end developer',
-		dates: 'January 2018 - February 2020',
+		dates: 'Jul 2018 - Oct 2019',
 		url: 'https://it-consultis.com/'
 	},
 	{
 		order: 2,
-		company: 'IT-Consultis',
+		company: 'LearningLeaders',
 		title: 'Front-end developer',
-		dates: 'January 2018 - February 2020',
-		url: 'https://it-consultis.com/'
+		dates: 'Nov 2019 - Jun 2020',
+		url: 'https://www.learningleaders.com/'
 	},
 	{
 		order: 3,
-		company: 'IT-Consultis',
-		title: 'Front-end developer',
-		dates: 'January 2018 - February 2020',
-		url: 'https://it-consultis.com/'
+		company: 'VO2 Asia Pacific',
+		title: 'Full-stack developer',
+		dates: 'Jul 2020 - Apr 2021',
+		url: 'https://vo2asiapacific.com/'
 	},
 	{
 		order: 4,
-		company: 'IT-Consultis',
-		title: 'Front-end developer',
-		dates: 'January 2018 - February 2020',
-		url: 'https://it-consultis.com/'
+		company: 'Wiredcraft',
+		title: 'Full-stack developer',
+		dates: 'Apr 2021 - Jan 2022',
+		url: 'https://wiredcraft.com/'
 	},
 	{
 		order: 5,
-		company: 'IT-Consultis',
-		title: 'Front-end developer',
-		dates: 'January 2018 - February 2020',
-		url: 'https://it-consultis.com/'
+		company: 'General Motors',
+		title: 'Full-stack developer',
+		dates: 'Jan 2022  - Nov 2023',
+		url: 'https://www.gm.com/'
 	},
 	{
 		order: 6,
-		company: 'IT-Consultis',
-		title: 'Front-end developer',
-		dates: 'January 2018 - February 2020',
-		url: 'https://it-consultis.com/'
+		company: 'Nikola Corporation',
+		title: 'Full-stack developer',
+		dates: 'Nov 2023 - Aug 2024',
+		url: 'https://www.nikolamotor.com'
 	}
 ];
 
@@ -47,17 +47,19 @@ export const skills = [
 	'HTML',
 	'CSS',
 	'JavaScript',
-	'TypeScript',
-	'Dart',
 	'Flutter',
 	'Responsive design',
 	'Node.js',
-	'Ruby',
+	'Ruby on Rails',
 	'React.js',
 	'Vue.js',
 	'Svelte',
+	'WeChat',
 	'GraphQl',
 	'AWS',
 	'Nest.js',
-	'Next.js'
+	'Next.js',
+	'TypeScript',
+	'Tailwind.css',
+	'REST Api'
 ];

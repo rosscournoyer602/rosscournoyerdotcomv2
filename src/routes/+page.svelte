@@ -15,7 +15,7 @@
 	<TitleSectionContent titleBgColor={colorSchemes[mode].blue.background} />
 </Section>
 <Section background={colorSchemes[mode].purple.background} text={colorSchemes[mode].purple.text}>
-	<TimelineSectionContent textColor={colorSchemes[mode].purple.text} />
+	<TimelineSectionContent borderColor={colorSchemes[mode].purple.border} />
 </Section>
 <Section background={colorSchemes[mode].green.background} text={colorSchemes[mode].green.text}>
 	<div class="text-center">
@@ -27,5 +27,6 @@
 	<BackgroundSectionChat
 		background={colorSchemes[mode].amber.background}
 		text={colorSchemes[mode].amber.text}
+		border={colorSchemes[mode].amber.border}
 	/>
 </Section>

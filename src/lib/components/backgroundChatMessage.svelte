@@ -38,7 +38,7 @@
 			<Loading txtColor={loaderColor} />
 		{:else}
 			<p
-				class={`text-justify ${txtColor} satoshi-bold text-lg md:text-2xl`}
+				class={`text-left ${txtColor} satoshi-bold text-lg md:text-2xl`}
 				transition:fade={{ duration: 400 }}
 			>
 				{text}

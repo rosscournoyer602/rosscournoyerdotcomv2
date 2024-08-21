@@ -6,7 +6,7 @@
 </script>
 
 <section>
-	<div id={sectionId} class={`w-[100vw] h-[100vh] relative ${background} ${text}`}>
+	<div id={sectionId} class={`w-[100vw] min-h-[100vh] relative ${background} ${text}`}>
 		<slot />
 	</div>
 </section>

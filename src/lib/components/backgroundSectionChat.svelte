@@ -7,6 +7,8 @@
 
 	export let background: string;
 	export let text: string;
+	export let border: string;
+
 	let chatElement: HTMLElement;
 	let chatIntersecting: boolean;
 	let awaitingReply = false;
@@ -15,7 +17,7 @@
 
 	let bgColor = `${'bg-' + text.split('-')[1] + '-' + text.split('-')[2]}`;
 	let txtColor = `${'text-' + background.split('-')[1] + '-' + background.split('-')[2]}`;
-	let borderColor = `${'border-' + text.split('-')[1] + '-' + text.split('-')[2]}`;
+
 	let currentMessageIndex = -1;
 
 	afterUpdate(() => {
@@ -107,7 +109,7 @@
 				<div class={`w-full h-12 flex px-2 justify-end satoshi-bold text-lg`}>
 					<button
 						type="button"
-						class={`w-[25%] max-w-[100px] my-auto ml-2 py-1 border-2 ${borderColor} ${background} rounded-md cursor-pointer transition-colors duration-200 text-lg md:text-xl hover:${bgColor} hover:${txtColor}`}
+						class={`w-[25%] max-w-[100px] my-auto ml-2 py-1 border-2 ${border} ${background} rounded-md cursor-pointer transition-colors duration-200 text-lg md:text-xl hover:${bgColor} hover:${txtColor}`}
 						on:click={() => {
 							handleUserReply('k');
 						}}
@@ -116,7 +118,7 @@
 					</button>
 					<button
 						type="button"
-						class={`w-[25%] max-w-[100px] my-auto ml-2 py-1 border-2 ${borderColor} ${background} rounded-md cursor-pointer transition-colors duration-200 md:text-lg hover:${bgColor} hover:${txtColor}`}
+						class={`w-[25%] max-w-[100px] my-auto ml-2 py-1 border-2 ${border} ${background} rounded-md cursor-pointer transition-colors duration-200 md:text-lg hover:${bgColor} hover:${txtColor}`}
 						on:click={() => {
 							handleUserReply('❤️');
 						}}
@@ -125,7 +127,7 @@
 					</button>
 					<button
 						type="button"
-						class={`w-[25%] max-w-[100px] my-auto ml-2 py-1 border-2 ${borderColor} ${background} rounded-md cursor-pointer transition-colors duration-200 text-xl hover:${bgColor} hover:${txtColor}`}
+						class={`w-[25%] max-w-[100px] my-auto ml-2 py-1 border-2 ${border} ${background} rounded-md cursor-pointer transition-colors duration-200 text-xl hover:${bgColor} hover:${txtColor}`}
 						on:click={() => {
 							handleUserReply('💰');
 						}}
