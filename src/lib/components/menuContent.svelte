@@ -1,18 +1,22 @@
 <script>
-	const baseIconClasses = 'transition-transform duration-300 hover:scale-125';
+	import { LogoGithub, LogoLinkedin, Mail } from 'svelte-ionicons';
+
+	const baseIconClasses = 'transition-transform duration-300 ml-1 md:hover:scale-125';
 </script>
 
 <div class="w-full h-full flex justify-between">
 	<p class="self-center">Ross Cournoyer</p>
-	<div class="self-end">
-		<a href="https://www.linkedin.com/in/rosscournoyer/" target="_blank">
-			<ion-icon name="logo-linkedin" class={`${baseIconClasses} hover:rotate-12`}></ion-icon>
-		</a>
-		<a href="https://github.com/rosscournoyer602" target="_blank">
-			<ion-icon name="logo-github" class={`${baseIconClasses} hover:-rotate-12`}></ion-icon>
-		</a>
-		<a href="mailto:rosswilliamcournoyer@gmail.com">
-			<ion-icon name="mail-sharp" class={`${baseIconClasses} hover:rotate-12`}></ion-icon>
-		</a>
+	<div class="self-center">
+		<div class="h-full flex justify-between p-1 pr-0">
+			<a href="https://www.linkedin.com/in/rosscournoyer/" target="_blank">
+				<LogoLinkedin size={32} class={`${baseIconClasses} md:hover:rotate-12`} />
+			</a>
+			<a href="https://github.com/rosscournoyer602" target="_blank">
+				<LogoGithub size={32} class={`${baseIconClasses} md:hover:rotate-12`} />
+			</a>
+			<a href="mailto:rosswilliamcournoyer@gmail.com">
+				<Mail size={32} class={`${baseIconClasses} md:hover:rotate-12`} />
+			</a>
+		</div>
 	</div>
 </div>
