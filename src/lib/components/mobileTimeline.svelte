@@ -52,6 +52,6 @@
 
 <style>
 	.flip {
-		transform: rotateY(180deg);
+		transform: scaleX(-1);
 	}
 </style>
