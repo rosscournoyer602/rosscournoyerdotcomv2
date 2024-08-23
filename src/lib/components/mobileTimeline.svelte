@@ -5,19 +5,19 @@
 	let sortedJobs = jobs.sort((a, b) => b.order - a.order);
 	export let borderColor = '';
 	let interval: number;
-	let dancer: HTMLElement;
+	let flip = false;
 
-	// onMount(() => {
-	// 	interval = setInterval(() => {
-	// 		dancer.classList.toggle('flip');
-	// 	}, 1000);
-	// });
+	onMount(() => {
+		interval = setInterval(() => {
+			flip = !flip;
+		}, 1000);
+	});
 
-	// onDestroy(() => {
-	// 	if (interval) {
-	// 		clearInterval(interval);
-	// 	}
-	// });
+	onDestroy(() => {
+		if (interval) {
+			clearInterval(interval);
+		}
+	});
 </script>
 
 <div class="h-full">
@@ -36,7 +36,11 @@
 		</ul>
 	</div>
 	<div class="-mt-[25px] mx-2 flex justify-end">
-		<div class="w-[50px] text-5xl flip" bind:this={dancer}>🕺🏼</div>
+		{#if flip}
+			<div class="w-[50px] text-5xl flip">🕺🏼</div>
+		{:else}
+			<div class="w-[50px] text-5xl">🕺🏼</div>
+		{/if}
 	</div>
 	<h2 class="px-4 tanker text-5xl text-right md:text-7xl md:text-left">Skills</h2>
 	<div class="p-4 satoshi-regular text-xl text-center">
@@ -52,9 +56,6 @@
 
 <style>
 	.flip {
-		-ms-transform: scaleX(-1);
-		-moz-transform: scaleX(-1);
-		-webkit-transform: scaleX(-1);
 		transform: scaleX(-1);
 	}
 </style>
