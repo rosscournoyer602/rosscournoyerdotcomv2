@@ -7,17 +7,17 @@
 	let interval: number;
 	let dancer: HTMLElement;
 
-	onMount(() => {
-		interval = setInterval(() => {
-			dancer.classList.toggle('flip');
-		}, 1000);
-	});
+	// onMount(() => {
+	// 	interval = setInterval(() => {
+	// 		dancer.classList.toggle('flip');
+	// 	}, 1000);
+	// });
 
-	onDestroy(() => {
-		if (interval) {
-			clearInterval(interval);
-		}
-	});
+	// onDestroy(() => {
+	// 	if (interval) {
+	// 		clearInterval(interval);
+	// 	}
+	// });
 </script>
 
 <div class="h-full">
@@ -36,7 +36,7 @@
 		</ul>
 	</div>
 	<div class="-mt-[25px] mx-2 flex justify-end">
-		<div class="w-[50px] text-5xl" bind:this={dancer}>🕺🏼</div>
+		<div class="w-[50px] text-5xl flip" bind:this={dancer}>🕺🏼</div>
 	</div>
 	<h2 class="px-4 tanker text-5xl text-right md:text-7xl md:text-left">Skills</h2>
 	<div class="p-4 satoshi-regular text-xl text-center">
