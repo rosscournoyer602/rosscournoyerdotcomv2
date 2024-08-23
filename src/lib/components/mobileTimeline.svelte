@@ -46,7 +46,7 @@
 	<div class="p-4 satoshi-regular text-xl text-center">
 		<ul class="flex flex-wrap gap-2">
 			{#each skills as skill}
-				<li class={`min-w-1/3 h-8 pb-4 px-1 flex-auto self-start rounded-md border ${borderColor}`}>
+				<li class={`h-8 pb-4 px-1 flex-auto self-start rounded-md border ${borderColor}`}>
 					<span>{skill}</span>
 				</li>
 			{/each}

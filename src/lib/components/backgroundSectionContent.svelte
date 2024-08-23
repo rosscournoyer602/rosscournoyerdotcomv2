@@ -1,6 +1,7 @@
 <script>
 	import { imageRequest } from '$lib/imageRequest';
 	import { IMAGE_URL } from '$lib/config';
+	import logo from '$lib/assets/logo.png';
 </script>
 
 <div class="px-4 py-4 text-center md:text-left">
@@ -9,10 +10,8 @@
 		class="w-full flex flex-col justify-center md:px-4 md:absolute-center md:flex-row md:justify-betweem md:content-center"
 	>
 		<img
-			src={`${IMAGE_URL}/${imageRequest('ross_2024.jpg', 350, 350)}`}
+			src={`${IMAGE_URL}/${imageRequest('ross_2024.webp', 350, 350)}`}
 			class="w-[350px] h-[350px] rounded-xl mx-auto my-6 md:my-auto md:mx-0"
-			width="350"
-			height="350"
 			alt="Ross Cournoyer handsome talented employable"
 		/>
 		<div class="satoshi-bold text-lg text-justify md:text-4xl md:mx-16 md:text-left">

@@ -5,6 +5,9 @@
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import { afterUpdate } from 'svelte';
 
+	import businessGoose from '$lib/assets/business-goose.webp';
+	import ross2024 from '$lib/assets/ross_2024.webp';
+
 	export let background: string;
 	export let text: string;
 	export let border: string;
@@ -143,7 +146,7 @@
 					{txtColor}
 					loaderColor={background}
 					text={userReply}
-					imageUrl={`${IMAGE_URL}/${imageRequest('business-goose.jpg', 200, 200)}`}
+					imageUrl={businessGoose}
 					showTyping={false}
 					avatarAlt="business goose"
 				/>
@@ -155,7 +158,7 @@
 					{txtColor}
 					loaderColor={background}
 					text={pageReply}
-					imageUrl={`${IMAGE_URL}/${imageRequest('ross_2024.jpg', 200, 200)}`}
+					imageUrl={ross2024}
 					showTyping={true}
 					avatarAlt="ross cournoyer"
 				/>
