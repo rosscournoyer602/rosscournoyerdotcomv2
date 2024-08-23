@@ -10,6 +10,7 @@
 	onMount(() => {
 		interval = setInterval(() => {
 			dancer.classList.toggle('flip');
+			dancer.classList.toggle('hidden');
 		}, 1000);
 	});
 
