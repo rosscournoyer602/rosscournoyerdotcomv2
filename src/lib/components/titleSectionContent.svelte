@@ -33,15 +33,24 @@
 	>
 		<h1 class="tanker text-6xl top-0 md:text-9xl">Ross Cournoyer</h1>
 		<p class="satoshi-bold text-2xl md:text-5xl">Very good web developer</p>
-		<div class="w-full pt-2 flex justify-center satoshi-bold text-4xl">
+		<div class="w-full pt-2 flex justify-center satoshi-bold">
 			<a href="https://www.linkedin.com/in/rosscournoyer/" target="_blank">
-				<LogoLinkedin size={32} class={`${baseIconClasses} md:hover:rotate-12`} />
+				<LogoLinkedin size={32} class={`${baseIconClasses} md:hidden`} />
+				<LogoLinkedin
+					size={48}
+					class={`${baseIconClasses} mt-2 hidden md:block md:hover:-rotate-12`}
+				/>
 			</a>
 			<a href="https://github.com/rosscournoyer602" target="_blank">
-				<LogoGithub size={32} class={`${baseIconClasses} md:hover:rotate-12`} />
+				<LogoGithub size={32} class={`${baseIconClasses} md:hidden`} />
+				<LogoGithub
+					size={48}
+					class={`${baseIconClasses} mt-2 hidden md:block md:hover:rotate-12`}
+				/>
 			</a>
 			<a href="mailto:rosswilliamcournoyer@gmail.com">
-				<Mail size={32} class={`${baseIconClasses} md:hover:rotate-12`} />
+				<Mail size={32} class={`${baseIconClasses} md:hidden`} />
+				<Mail size={48} class={`${baseIconClasses} mt-2 hidden md:block md:hover:-rotate-12`} />
 			</a>
 		</div>
 	</div>

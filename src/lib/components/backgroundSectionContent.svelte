@@ -1,7 +1,6 @@
 <script>
 	import { imageRequest } from '$lib/imageRequest';
 	import { IMAGE_URL } from '$lib/config';
-	import logo from '$lib/assets/logo.png';
 </script>
 
 <div class="px-4 py-4 text-center md:text-left">
