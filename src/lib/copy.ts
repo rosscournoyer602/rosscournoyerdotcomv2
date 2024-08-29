@@ -63,3 +63,18 @@ export const skills = [
 	'Tailwind.css',
 	'REST Api'
 ];
+
+export const projects = [
+	{
+		name: 'Photo app',
+		description:
+			"Flatland! Hypatia. Galaxies Orion's sword globular star cluster? Light years quasar as a patch of light gathered by gravity Vangelis radio telescope. Stirred by starlight vanquish the impossible Tunguska event cosmic fugue courage of our questions worldlets galaxies birth colonies. Vastness is bearable only through love.",
+		image: ''
+	},
+	{
+		name: 'Vue Sequencer',
+		description:
+			'Donec non tempus lectus. Sed ultrices tellus id eros lacinia, ut facilisis ante varius. Pellentesque volutpat porttitor lectus ac tempor. Phasellus consequat auctor sapien quis scelerisque. Aliquam et eros sed tortor accumsan dictum quis eu risus. Sed lobortis maximus risus et ornare.',
+		image: ''
+	}
+];

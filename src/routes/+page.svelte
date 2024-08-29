@@ -4,6 +4,7 @@
 	import TitleSectionContent from '$lib/components/titleSectionContent.svelte';
 	import BackgroundSectionChat from '$lib/components/backgroundSectionChat.svelte';
 	import TimelineSectionContent from '$lib/components/timelineSectionContent.svelte';
+	import ProjectSwiper from '$lib/components/projectSwiper.svelte';
 	let mode = 'dark' as keyof typeof colorSchemes;
 </script>
 
@@ -11,19 +12,25 @@
 	sectionId="title-section"
 	background={colorSchemes[mode].blue.background}
 	text={colorSchemes[mode].blue.text}
+	additionalClasses={['min-h-[100vh]']}
 >
 	<TitleSectionContent titleBgColor={colorSchemes[mode].blue.background} />
 </Section>
-<Section background={colorSchemes[mode].purple.background} text={colorSchemes[mode].purple.text}>
+<Section
+	background={colorSchemes[mode].purple.background}
+	text={colorSchemes[mode].purple.text}
+	additionalClasses={['md:py-8']}
+>
 	<TimelineSectionContent borderColor={colorSchemes[mode].purple.border} />
 </Section>
 <Section background={colorSchemes[mode].green.background} text={colorSchemes[mode].green.text}>
-	<div class="text-center">
-		<h2 class="tanker text-5xl md:text-7xl">Projects and content</h2>
-		<p class="satoshi-bold text-xl md:text-3xl">Maybe a</p>
-	</div>
+	<ProjectSwiper />
 </Section>
-<Section background={colorSchemes[mode].amber.background} text={colorSchemes[mode].amber.text}>
+<Section
+	background={colorSchemes[mode].amber.background}
+	text={colorSchemes[mode].amber.text}
+	additionalClasses={['min-h-[100vh]']}
+>
 	<BackgroundSectionChat
 		background={colorSchemes[mode].amber.background}
 		text={colorSchemes[mode].amber.text}

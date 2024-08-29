@@ -3,10 +3,14 @@
 	export let sectionId = nanoid();
 	export let background = '';
 	export let text = '';
+	export let additionalClasses: string[] = [];
 </script>
 
 <section>
-	<div id={sectionId} class={`w-[100vw] min-h-[100vh] relative ${background} ${text}`}>
+	<div
+		id={sectionId}
+		class={`w-[100vw] relative ${background} ${text} ${additionalClasses.map((ac) => ac)}`}
+	>
 		<slot />
 	</div>
 </section>

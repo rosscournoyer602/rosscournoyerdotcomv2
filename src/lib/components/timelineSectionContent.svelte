@@ -24,8 +24,8 @@
 <div class="h-full md:flex md:justify-evenly">
 	<div>
 		<h2 class="p-4 tanker text-5xl text-right md:text-7xl md:text-left">Work</h2>
-		<div class="md:h-full">
-			<ul class="md:h-full md:flex md:flex-col md:justify-between">
+		<div class="h-full">
+			<ul class="md:h-full">
 				{#each sortedJobs as job}
 					<li class={`ml-4 pb-2`}>
 						<a href={job.url} target="_blank">

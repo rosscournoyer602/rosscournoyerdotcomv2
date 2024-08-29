@@ -40,6 +40,7 @@
 		"generate-random-emoji": "^1.0.2",
 		"nanoid": "^5.0.7",
 		"svelte-intersection-observer": "^1.0.0",
-		"svelte-ionicons": "^1.1.2"
+		"svelte-ionicons": "^1.1.2",
+		"swiper": "^11.1.11"
 	}
 }
