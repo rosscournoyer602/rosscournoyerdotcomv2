@@ -14,3 +14,9 @@
 		<slot />
 	</div>
 </section>
+
+<style>
+	.gummy-worm-bg {
+		background-image: url('$lib/assets/gummy-worms.avif');
+	}
+</style>

@@ -69,12 +69,22 @@ export const projects = [
 		name: 'Photo app',
 		description:
 			"Flatland! Hypatia. Galaxies Orion's sword globular star cluster? Light years quasar as a patch of light gathered by gravity Vangelis radio telescope. Stirred by starlight vanquish the impossible Tunguska event cosmic fugue courage of our questions worldlets galaxies birth colonies. Vastness is bearable only through love.",
-		image: ''
+		tech: 'React, SCSS',
+		alt: 'photo-app-screenshot',
+		imageClasses: 'w-full',
+		colorClasses: 'bg-neutral-900 text-amber-300 border-amber-300',
+		gitRepo: 'http://google.com',
+		demo: 'http://google.com'
 	},
 	{
 		name: 'Vue Sequencer',
 		description:
 			'Donec non tempus lectus. Sed ultrices tellus id eros lacinia, ut facilisis ante varius. Pellentesque volutpat porttitor lectus ac tempor. Phasellus consequat auctor sapien quis scelerisque. Aliquam et eros sed tortor accumsan dictum quis eu risus. Sed lobortis maximus risus et ornare.',
-		image: ''
+		tech: 'Vue 2, SCSS',
+		alt: 'vue-sequencer-screenshot',
+		imageClasses: 'h-[400px] mt-4',
+		colorClasses: 'bg-blue-300 text-slate-950 border-slate-950',
+		gitRepo: 'http://google.com',
+		demo: 'http://google.com'
 	}
 ];
