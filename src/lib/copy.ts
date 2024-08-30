@@ -68,23 +68,23 @@ export const projects = [
 	{
 		name: 'Photo app',
 		description:
-			"Flatland! Hypatia. Galaxies Orion's sword globular star cluster? Light years quasar as a patch of light gathered by gravity Vangelis radio telescope. Stirred by starlight vanquish the impossible Tunguska event cosmic fugue courage of our questions worldlets galaxies birth colonies. Vastness is bearable only through love.",
-		tech: 'React, SCSS',
+			"A takehome tech-screen project for Wiredcraft that I've been adding to over the years. It has a mosaic pattern and lazy-loading of images. I also added JWT auth and the ability to save your favorite photos. This project was a great opportunity to build out my backend boilerplate and get into AWS. The profile images are served from a serverless image handler made with S3, Lambda, Sharp and Cloudfront CDN.",
+		tech: 'React, SCSS, Node, Postgres, Docker, AWS',
 		alt: 'photo-app-screenshot',
 		imageClasses: 'w-full',
 		colorClasses: 'bg-neutral-900 text-amber-300 border-amber-300',
-		gitRepo: 'http://google.com',
-		demo: 'http://google.com'
+		gitRepo: 'https://github.com/rosscournoyer602/photo-app-frontend',
+		demo: 'https://photo-app-frontend-v2.vercel.app/'
 	},
 	{
 		name: 'Vue Sequencer',
 		description:
-			'Donec non tempus lectus. Sed ultrices tellus id eros lacinia, ut facilisis ante varius. Pellentesque volutpat porttitor lectus ac tempor. Phasellus consequat auctor sapien quis scelerisque. Aliquam et eros sed tortor accumsan dictum quis eu risus. Sed lobortis maximus risus et ornare.',
-		tech: 'Vue 2, SCSS',
+			"Back in 2019 I wanted to learn some Vue, so I made this drum machine app. I struggled with browser compatibility until I refactored it to use the Web Audio API. Now it sounds great on any device. I'll come back and spruce up the styling some day. For now it's just a fun novelty item to share!",
+		tech: 'Vue 2, SCSS, Web Audio API',
 		alt: 'vue-sequencer-screenshot',
-		imageClasses: 'h-[400px] mt-4',
+		imageClasses: 'h-[300px] mt-4',
 		colorClasses: 'bg-blue-300 text-slate-950 border-slate-950',
-		gitRepo: 'http://google.com',
-		demo: 'http://google.com'
+		gitRepo: 'https://github.com/rosscournoyer602/vue-sequencer',
+		demo: 'https://vue-sequencer.vercel.app/'
 	}
 ];

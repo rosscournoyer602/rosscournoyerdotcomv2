@@ -38,7 +38,7 @@
 			{#each projects as _, index}
 				<button
 					id={`pagination-${index}`}
-					class={`pagination__dot h-[20px] w-[20px] bg-white rounded-2xl transition-opacity duration-[1200ms] ${selectedIndex === index ? 'pagination-active' : 'pagination-inactive'}`}
+					class={`pagination__dot h-[16px] w-[16px] bg-white rounded-2xl transition-opacity duration-[1200ms] ${selectedIndex === index ? 'pagination-active' : 'pagination-inactive'}`}
 					on:click={() => handlePaginationClick(index)}
 				/>
 			{/each}
@@ -55,23 +55,27 @@
 		disableOnInteraction="true"
 	>
 		{#each projects as project, index}
-			<swiper-slide class={`h-full min-h-[100vh] pt-12 my-auto ${project.colorClasses}`}>
-				<div class="h-full flex flex-col px-4">
-					<h2 class="tanker text-4xl text-center">{project.name}</h2>
-					<p class="satoshi-regular text-center mt-2">{project.tech}</p>
+			<swiper-slide class={`min-h-[100vh] relative pt-16 my-auto ${project.colorClasses}`}>
+				<div class="h-full flex flex-col justify-between px-4">
 					<div>
-						<img
-							class={`mx-auto ${project.imageClasses}`}
-							src={swiperImages[index]}
-							alt={project.alt}
-						/>
-						<p class="my-2 satoshi-bold text-md indent-8">{projects[index].description}</p>
+						<h2 class="tanker text-4xl text-center">{project.name}</h2>
+						<p class="satoshi-regular text-center mt-2">{project.tech}</p>
+						<div>
+							<img
+								class={`mx-auto ${project.imageClasses}`}
+								src={swiperImages[index]}
+								alt={project.alt}
+							/>
+							<p class="my-2 satoshi-bold text-md indent-8">{projects[index].description}</p>
+						</div>
 					</div>
-					<div class="flex flex-col text-center gap-4 mt-4">
-						<a class="tanker text-3xl" href={project.gitRepo} target="_blank"> See the code ➡️</a>
-						{#if project.demo}
-							<a class="tanker text-3xl" href={project.demo} target="_blank"> Try the demo ➡️</a>
-						{/if}
+					<div class="absolute bottom-4 left-1/2 -translate-x-1/2">
+						<div class="flex flex-col text-center gap-4 mt-4">
+							<a class="tanker text-3xl" href={project.gitRepo} target="_blank"> See the code ➡️</a>
+							{#if project.demo}
+								<a class="tanker text-3xl" href={project.demo} target="_blank"> Try the demo ➡️</a>
+							{/if}
+						</div>
 					</div>
 				</div>
 			</swiper-slide>
