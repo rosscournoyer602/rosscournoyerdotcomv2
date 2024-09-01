@@ -18,7 +18,7 @@ export default {
 		purple: {
 			background: 'bg-purple-950',
 			text: 'text-violet-300',
-			border: 'border-violet-400'
+			border: 'border-violet-300'
 		},
 		red: {
 			background: 'bg-red-950',

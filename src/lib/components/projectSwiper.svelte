@@ -66,7 +66,7 @@
 								src={swiperImages[index]}
 								alt={project.alt}
 							/>
-							<p class="my-2 satoshi-bold text-md indent-8">{projects[index].description}</p>
+							<p class="mt-4 satoshi-bold text-md indent-8">{projects[index].description}</p>
 						</div>
 					</div>
 					<div class="absolute bottom-4 left-1/2 -translate-x-1/2">

@@ -68,7 +68,7 @@ export const projects = [
 	{
 		name: 'Photo app',
 		description:
-			"A takehome tech-screen project for Wiredcraft that I've been adding to over the years. It has a mosaic pattern and lazy-loading of images. I also added JWT auth and the ability to save your favorite photos. This project was a great opportunity to build out my backend boilerplate and get into AWS. The profile images are served from a serverless image handler made with S3, Lambda, Sharp and Cloudfront CDN.",
+			"A takehome tech-screen project for Wiredcraft that I've been adding to over the years. It has a mosaic pattern and lazy-loading of images. I also added JWT auth and the ability to save your favorite photos. This project was a great opportunity to build out my backend boilerplate and get into AWS. The profile images are served from a serverless image handler made with S3, Lambda, Sharp, and Cloudfront.",
 		tech: 'React, SCSS, Node, Postgres, Docker, AWS',
 		alt: 'photo-app-screenshot',
 		imageClasses: 'w-full',
@@ -79,7 +79,7 @@ export const projects = [
 	{
 		name: 'Vue Sequencer',
 		description:
-			"Back in 2019 I wanted to learn some Vue, so I made this drum machine app. I struggled with browser compatibility until I refactored it to use the Web Audio API. Now it sounds great on any device. I'll come back and spruce up the styling some day. For now it's just a fun novelty item to share!",
+			"Back in 2019 I wanted to learn some Vue, so I made this drum machine app. I struggled with browser compatibility until I refactored it to use the Web Audio API. Now it sounds great on any device. I'll come back and spruce up the styling some day. It's a lot of fun as-is!",
 		tech: 'Vue 2, SCSS, Web Audio API',
 		alt: 'vue-sequencer-screenshot',
 		imageClasses: 'h-[300px] mt-4',
