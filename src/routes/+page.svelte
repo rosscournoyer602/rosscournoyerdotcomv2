@@ -5,7 +5,7 @@
 	import BackgroundSectionChat from '$lib/components/backgroundSectionChat.svelte';
 	import TimelineSectionContent from '$lib/components/timelineSectionContent.svelte';
 	import ProjectSwiper from '$lib/components/projectSwiper.svelte';
-	import gummyBears from '$lib/assets/gummy-worms.avif';
+	// import gummyBears from '$lib/assets/gummy-worms.avif';
 
 	let mode = 'dark' as keyof typeof colorSchemes;
 </script>
@@ -25,11 +25,7 @@
 >
 	<TimelineSectionContent borderColor={colorSchemes[mode].purple.border} />
 </Section>
-<Section
-	background={colorSchemes[mode].green.background}
-	text={colorSchemes[mode].green.text}
-	additionalClasses={['gummy-worm-bg']}
->
+<Section background={colorSchemes[mode].green.background} text={colorSchemes[mode].green.text}>
 	<ProjectSwiper />
 </Section>
 <Section

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import colorSchemes from '$lib/colorSchemes';
 	import { jobs, skills } from '$lib/copy';
 	import { onDestroy, onMount } from 'svelte';
 
@@ -7,20 +8,12 @@
 	let sortedJobs = jobs.sort((a, b) => b.order - a.order);
 	let interval: number;
 	let flip = false;
-	let dancerControl: HTMLElement;
-	let dancerWorkload = 100;
 
 	onMount(() => {
-		updateDancerSpeed(1100 - dancerWorkload);
-		dancerControl.oninput = (e) => {
-			const target = e.target as HTMLInputElement;
-			dancerWorkload = target.valueAsNumber;
-			updateDancerSpeed(1100 - dancerWorkload);
-		};
+		updateDancerSpeed(1000);
 	});
 
 	function updateDancerSpeed(intervalSpeed: number) {
-		clearInterval(interval);
 		interval = setInterval(() => {
 			flip = !flip;
 		}, intervalSpeed);
@@ -53,16 +46,6 @@
 	<div class="pt-4">
 		<div class="flex justify-between gap-4 px-4">
 			<h2 class="tanker text-5xl self-center md:text-7xl md:pb-2">Skills</h2>
-			<div class="slidecontainer self-center pt-1">
-				<input
-					bind:this={dancerControl}
-					type="range"
-					min="0"
-					max="900"
-					value="100"
-					class="slider"
-				/>
-			</div>
 			<div class="relative">
 				{#if flip}
 					<div class="w-[70px] text-7xl flip">🕺🏼</div>
@@ -98,44 +81,6 @@
 <style>
 	.flip {
 		transform: scaleX(-1);
-	}
-	.slidecontainer {
-		width: 100%; /* Width of the outside container */
-	}
-
-	/* The slider itself */
-	.slider {
-		-webkit-appearance: none; /* Override default CSS styles */
-		appearance: none;
-		width: 100%; /* Full-width */
-		height: 16px; /* Specified height */
-		background: #c4b5fd; /* Grey background */
-		outline: none; /* Remove outline */
-		opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-		-webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
-		transition: opacity 0.2s;
-	}
-
-	/* Mouse-over effects */
-	.slider:hover {
-		opacity: 1; /* Fully shown on mouse-over */
-	}
-
-	/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-	.slider::-webkit-slider-thumb {
-		-webkit-appearance: none; /* Override default look */
-		appearance: none;
-		width: 24px; /* Set a specific slider handle width */
-		height: 24px; /* Slider handle height */
-		background: #3b0764; /* Green background */
-		cursor: pointer; /* Cursor on hover */
-	}
-
-	.slider::-moz-range-thumb {
-		width: 24px; /* Set a specific slider handle width */
-		height: 24px; /* Slider handle height */
-		background: #3b0764; /* Green background */
-		cursor: pointer; /* Cursor on hover */
 	}
 
 	.point {

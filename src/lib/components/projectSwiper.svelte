@@ -5,6 +5,7 @@
 	import sequencerImg from '$lib/assets/sequencer_cropped.png';
 	import { beforeUpdate, onMount } from 'svelte';
 	import type Swiper from 'swiper';
+	import colorSchemes from '$lib/colorSchemes';
 
 	const swiperImages = [photoAppDesktop, sequencerImg];
 	const swiperImgClasses = ['w-full', 'h-[400px]'];
@@ -18,7 +19,6 @@
 		swiper.on('slideChange', (swiper) => {
 			selectedIndex = swiper.activeIndex;
 		});
-
 		projectSwiper = swiper;
 	});
 

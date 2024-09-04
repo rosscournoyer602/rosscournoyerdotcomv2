@@ -86,5 +86,16 @@ export const projects = [
 		colorClasses: 'bg-blue-300 text-slate-950 border-slate-950',
 		gitRepo: 'https://github.com/rosscournoyer602/vue-sequencer',
 		demo: 'https://vue-sequencer.vercel.app/'
+	},
+	{
+		name: 'This website',
+		description:
+			"This very one! I made the latest version of my portfolio with SvelteKit and Tailwind. I have to say its probably my favorite web framework now. It feels very intuitive to manage state, as well as abstracting and reusing components. This being a simple-ish page, there is more to explore. But I can't wait to use it again.",
+		tech: 'Svelte, Tailwind, Vite',
+		alt: 'portfolio-screenshot',
+		imageClasses: 'w-full',
+		colorClasses: 'bg-amber-950 text-yellow-400 border-yellow-400',
+		gitRepo: 'https://github.com/rosscournoyer602/photo-app-frontend',
+		demo: 'https://photo-app-frontend-v2.vercel.app/'
 	}
 ];
