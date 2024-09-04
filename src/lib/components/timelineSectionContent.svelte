@@ -125,9 +125,9 @@
 	.slider::-webkit-slider-thumb {
 		-webkit-appearance: none; /* Override default look */
 		appearance: none;
-		width: 16px; /* Set a specific slider handle width */
-		height: 16px; /* Slider handle height */
-		background: #04aa6d; /* Green background */
+		width: 24px; /* Set a specific slider handle width */
+		height: 24px; /* Slider handle height */
+		background: #3b0764; /* Green background */
 		cursor: pointer; /* Cursor on hover */
 	}
 
