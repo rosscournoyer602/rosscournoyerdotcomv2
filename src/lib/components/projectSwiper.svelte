@@ -19,6 +19,7 @@
 		swiper.on('slideChange', (swiper) => {
 			selectedIndex = swiper.activeIndex;
 		});
+
 		projectSwiper = swiper;
 	});
 

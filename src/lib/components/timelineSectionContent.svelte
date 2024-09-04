@@ -34,7 +34,7 @@
 				{#each sortedJobs as job}
 					<li class={`ml-4 pb-2`}>
 						<a href={job.url} target="_blank">
-							<h3 class="satoshi-bold text-2xl">{job.company}</h3>
+							<h3 class="satoshi-bold text-2xl md:text-3xl">{job.company}</h3>
 						</a>
 						<p class="text-xl">{job.title}</p>
 						<p class="text-md satoshi-regular">{job.dates}</p>
@@ -63,17 +63,17 @@
 				{/each}
 			</ul>
 		</div>
-	</div>
-	<div class="pb-12 pt-8 flex flex-col justify-center tanker text-3xl text-center">
-		<div class="flex justify-center gap-2 text-center">
-			<div class="point">👉</div>
-			<a
-				href="https://team-venture.s3.amazonaws.com/Ross+Cournoyer_Resume_full.pdf"
-				target="_blank"
-			>
-				Download my resume
-			</a>
-			<div class="point-reverse">👈</div>
+		<div class="pb-12 pt-8 flex flex-col justify-center tanker text-3xl text-center md:text-4xl">
+			<div class="flex justify-center gap-2 text-center">
+				<div class="point">👉</div>
+				<a
+					href="https://team-venture.s3.amazonaws.com/Ross+Cournoyer_Resume_full.pdf"
+					target="_blank"
+				>
+					Download my resume
+				</a>
+				<div class="point-reverse">👈</div>
+			</div>
 		</div>
 	</div>
 </div>
