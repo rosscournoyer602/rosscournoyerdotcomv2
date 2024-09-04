@@ -15,7 +15,6 @@
 		dancerControl.oninput = (e) => {
 			const target = e.target as HTMLInputElement;
 			dancerWorkload = target.valueAsNumber;
-			console.log('DANCER WORKLOAD', dancerWorkload);
 			updateDancerSpeed(1100 - dancerWorkload);
 		};
 	});
@@ -25,7 +24,6 @@
 		interval = setInterval(() => {
 			flip = !flip;
 		}, intervalSpeed);
-		console.log('INTERVAL', intervalSpeed);
 	}
 
 	onDestroy(() => {
@@ -65,7 +63,7 @@
 					class="slider"
 				/>
 			</div>
-			<div>
+			<div class="relative">
 				{#if flip}
 					<div class="w-[70px] text-7xl flip">🕺🏼</div>
 				{:else}
@@ -81,6 +79,18 @@
 					</li>
 				{/each}
 			</ul>
+		</div>
+	</div>
+	<div class="pb-12 pt-8 flex flex-col justify-center tanker text-3xl text-center">
+		<div class="flex justify-center gap-2 text-center">
+			<div class="point">👉</div>
+			<a
+				href="https://team-venture.s3.amazonaws.com/Ross+Cournoyer_Resume_full.pdf"
+				target="_blank"
+			>
+				Download my resume
+			</a>
+			<div class="point-reverse">👈</div>
 		</div>
 	</div>
 </div>
@@ -126,5 +136,42 @@
 		height: 24px; /* Slider handle height */
 		background: #3b0764; /* Green background */
 		cursor: pointer; /* Cursor on hover */
+	}
+
+	.point {
+		animation: point ease-in-out 1s infinite;
+	}
+
+	.point-reverse {
+		animation: point-reverse ease-in-out 1s infinite;
+		animation-direction: reverse;
+	}
+
+	@keyframes point {
+		0% {
+			transform: rotate(-0.1turn);
+		}
+
+		50% {
+			transform: rotate(0turn);
+		}
+
+		100% {
+			transform: rotate(-0.1turn);
+		}
+	}
+
+	@keyframes point-reverse {
+		0% {
+			transform: rotate(0.1turn);
+		}
+
+		50% {
+			transform: rotate(0turn);
+		}
+
+		100% {
+			transform: rotate(0.1turn);
+		}
 	}
 </style>
