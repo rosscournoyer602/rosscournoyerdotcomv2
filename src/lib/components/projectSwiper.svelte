@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { projects } from '$lib/copy';
 	import photoAppDesktop from '$lib/assets/photoapp_desktop_cropped.png';
-	import photoAppMobile from '$lib/assets/photoapp_mobile_cropped.png';
 	import sequencerImg from '$lib/assets/sequencer_cropped.png';
+	import paycalcImg from '$lib/assets/paycalc_cropped.png';
+	import portfolioImg from '$lib/assets/portfolio_site_cropped.png';
 	import { beforeUpdate, onMount } from 'svelte';
 	import type Swiper from 'swiper';
 	import colorSchemes from '$lib/colorSchemes';
 
-	const swiperImages = [photoAppDesktop, sequencerImg];
+	const swiperImages = [sequencerImg, photoAppDesktop, portfolioImg, paycalcImg];
 	const swiperImgClasses = ['w-full', 'h-[400px]'];
 	let selectedIndex = 0;
 	let projectSwiper: Swiper;
@@ -16,11 +17,9 @@
 		const swiperEl = document.querySelector('swiper-container');
 		const swiper = swiperEl?.swiper as Swiper;
 
-		swiper.on('slideChange', (swiper) => {
-			selectedIndex = swiper.activeIndex;
+		swiper.on('init', function () {
+			console.log('slide changed');
 		});
-
-		projectSwiper = swiper;
 	});
 
 	function handlePaginationClick(index: number) {
@@ -31,10 +30,10 @@
 </script>
 
 <div class="w-full h-full relative">
-	<!-- <div class="absolute pt-4 top-0 left-1/2 -translate-x-1/2 z-10 mix-blend-luminosity">
-		<h2 class="tanker text-5xl">Projects</h2>
-	</div> -->
-	<div class="pagination absolute mt-2 top-0 left-1/2 -translate-x-1/2 z-10">
+	<div class="absolute pt-4 pl-4 top-0 left-0 z-10 mix-blend-luminosity">
+		<h2 class="tanker text-5xl md:text-7xl">Projects</h2>
+	</div>
+	<!-- <div class="pagination absolute mt-4 top-0 right-0 pr-4 z-10">
 		<div class="pagination flex gap-4 justify-start">
 			{#each projects as _, index}
 				<button
@@ -44,38 +43,45 @@
 				/>
 			{/each}
 		</div>
-	</div>
+	</div> -->
 	<swiper-container
 		class="h-full"
-		autoplay={{
-			delay: 10000,
-			disableOnInteraction: true,
-			pauseOnMouseEnter: true
-		}}
+		autoHeight={true}
 		speed={1200}
 		disableOnInteraction="true"
+		autoplay={{
+			delay: 7000,
+			pauseOnMouseEnter: true
+		}}
+		loop={true}
 	>
 		{#each projects as project, index}
-			<swiper-slide class={`min-h-[100vh] relative pt-16 my-auto ${project.colorClasses}`}>
+			<swiper-slide class={`h-full min-h-[100vh] relative pt-20 my-auto ${project.colorClasses}`}>
 				<div class="h-full flex flex-col justify-between px-4">
 					<div>
-						<h2 class="tanker text-4xl text-center">{project.name}</h2>
-						<p class="satoshi-regular text-center mt-2">{project.tech}</p>
-						<div>
+						<h2 class="tanker text-4xl text-center md:text-5xl">{project.name}</h2>
+						<p class="mt-2 satoshi-regular text-center md:text-2xl">{project.tech}</p>
+						<div class="md:flex md:justify-center md:gap-4 md:mt-12">
 							<img
-								class={`mx-auto ${project.imageClasses}`}
+								class={`md:self-center ${project.imageClasses}`}
 								src={swiperImages[index]}
 								alt={project.alt}
 							/>
-							<p class="mt-4 satoshi-bold text-md indent-8">{projects[index].description}</p>
-						</div>
-					</div>
-					<div class="absolute bottom-4 left-1/2 -translate-x-1/2">
-						<div class="flex flex-col text-center gap-4 mt-4">
-							<a class="tanker text-3xl" href={project.gitRepo} target="_blank"> See the code ➡️</a>
-							{#if project.demo}
-								<a class="tanker text-3xl" href={project.demo} target="_blank"> Try the demo ➡️</a>
-							{/if}
+							<div class="mt-4 md:mt-8 md:mr-4 md:text-xl md:w-1/3">
+								<p class="satoshi-bold indent-8">
+									{projects[index].description}
+								</p>
+								<div class="flex flex-col text-center gap-4 mt-4 md:text-left md:mt-10">
+									<a class="tanker text-3xl" href={project.gitRepo} target="_blank">
+										See the code ➡️</a
+									>
+									{#if project.demo}
+										<a class="tanker text-3xl" href={project.demo} target="_blank">
+											Try the demo ➡️</a
+										>
+									{/if}
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
