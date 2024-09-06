@@ -95,8 +95,8 @@ export const projects = [
 		alt: 'portfolio-screenshot',
 		imageClasses: 'w-full md:w-2/3 md:max-h-[550px] md:max-w-[825px] md:self-center',
 		colorClasses: 'bg-amber-950 text-yellow-400 border-yellow-400',
-		gitRepo: 'https://github.com/rosscournoyer602/photo-app-frontend',
-		demo: 'https://photo-app-frontend-v2.vercel.app/'
+		gitRepo: 'https://github.com/rosscournoyer602/rosscournoyerdotcomv2',
+		demo: ''
 	},
 	{
 		name: 'Paycalc',
@@ -106,7 +106,7 @@ export const projects = [
 		alt: 'paycalc-screenshot',
 		imageClasses: 'w-full md:w-2/3 md:max-h-[550px] md:max-w-[825px] md:self-center',
 		colorClasses: 'bg-rose-800 text-fuchsia-200 border-yellow-400',
-		gitRepo: 'https://github.com/rosscournoyer602/photo-app-frontend',
-		demo: 'https://photo-app-frontend-v2.vercel.app/'
+		gitRepo: 'https://github.com/rosscournoyer602/paycalc',
+		demo: ''
 	}
 ];
