@@ -17,8 +17,8 @@
 		const swiperEl = document.querySelector('swiper-container');
 		const swiper = swiperEl?.swiper as Swiper;
 
-		swiper.on('init', function () {
-			console.log('slide changed');
+		swiper.on('slideChange', function (swiper) {
+			selectedIndex = swiper.activeIndex;
 		});
 	});
 
@@ -30,10 +30,10 @@
 </script>
 
 <div class="w-full h-full relative">
-	<div class="absolute pt-4 pl-4 top-0 left-0 z-10 mix-blend-luminosity">
+	<div class="absolute mt-4 pl-4 top-0 left-0 z-10 mix-blend-luminosity">
 		<h2 class="tanker text-5xl md:text-7xl">Projects</h2>
 	</div>
-	<!-- <div class="pagination absolute mt-4 top-0 right-0 pr-4 z-10">
+	<div class="pagination absolute mt-5 top-0 right-0 pr-4 z-10">
 		<div class="pagination flex gap-4 justify-start">
 			{#each projects as _, index}
 				<button
@@ -43,20 +43,22 @@
 				/>
 			{/each}
 		</div>
-	</div> -->
+	</div>
 	<swiper-container
 		class="h-full"
 		autoHeight={true}
 		speed={1200}
 		disableOnInteraction="true"
+		slidesPerView={1}
 		autoplay={{
-			delay: 7000,
+			delay: 10000,
 			pauseOnMouseEnter: true
 		}}
-		loop={true}
 	>
 		{#each projects as project, index}
-			<swiper-slide class={`h-full min-h-[100vh] relative pt-20 my-auto ${project.colorClasses}`}>
+			<swiper-slide
+				class={`h-full min-h-[100vh] relative pt-20 md:pt-28 my-auto ${project.colorClasses}`}
+			>
 				<div class="h-full flex flex-col justify-between px-4">
 					<div>
 						<h2 class="tanker text-4xl text-center md:text-5xl">{project.name}</h2>
@@ -68,7 +70,7 @@
 								alt={project.alt}
 							/>
 							<div class="mt-4 md:mt-8 md:mr-4 md:text-xl md:w-1/3">
-								<p class="satoshi-bold indent-8">
+								<p class="satoshi-bold indent-8 text-justify">
 									{projects[index].description}
 								</p>
 								<div class="flex flex-col text-center gap-4 mt-4 md:text-left md:mt-10">
