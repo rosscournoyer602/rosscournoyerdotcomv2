@@ -10,32 +10,15 @@
 	let mode = 'dark' as keyof typeof colorSchemes;
 </script>
 
-<Section
-	sectionId="title-section"
-	background={colorSchemes[mode].blue.background}
-	text={colorSchemes[mode].blue.text}
-	additionalClasses={['min-h-[100vh]']}
->
+<Section sectionId="title-section" additionalClasses={['min-h-[100vh] bg-slate-950 text-blue-300']}>
 	<TitleSectionContent titleBgColor={colorSchemes[mode].blue.background} />
 </Section>
-<Section
-	background={colorSchemes[mode].purple.background}
-	text={colorSchemes[mode].purple.text}
-	additionalClasses={['md:py-8']}
->
-	<TimelineSectionContent borderColor={colorSchemes[mode].purple.border} />
+<Section additionalClasses={['bg-purple-950 text-violet-300 border-violet-300 md:py-8 ']}>
+	<TimelineSectionContent borderColor="border-violet-300" />
 </Section>
-<Section background={colorSchemes[mode].green.background} text={colorSchemes[mode].green.text}>
+<Section additionalClasses={['bg-cyan-200 text-stone-600']}>
 	<ProjectSwiper />
 </Section>
-<Section
-	background={colorSchemes[mode].amber.background}
-	text={colorSchemes[mode].amber.text}
-	additionalClasses={['min-h-[100vh]']}
->
-	<BackgroundSectionChat
-		background={colorSchemes[mode].amber.background}
-		text={colorSchemes[mode].amber.text}
-		border={colorSchemes[mode].amber.border}
-	/>
+<Section additionalClasses={['min-h-[100vh] bg-zinc-50']}>
+	<BackgroundSectionChat />
 </Section>

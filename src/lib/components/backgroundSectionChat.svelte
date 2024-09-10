@@ -8,31 +8,31 @@
 	import businessGoose from '$lib/assets/business-goose.webp';
 	import ross2024 from '$lib/assets/ross_2024.webp';
 
-	export let background: string;
-	export let text: string;
-	export let border: string;
-
 	let chatElement: HTMLElement;
 	let chatIntersecting: boolean;
 	let awaitingReply = false;
 	let userReply: string;
 	let pageReply: string;
 
-	let bgColor = `${'bg-' + text.split('-')[1] + '-' + text.split('-')[2]}`;
-	let txtColor = `${'text-' + background.split('-')[1] + '-' + background.split('-')[2]}`;
+	let incomingBgColor = 'bg-zinc-300';
+	let outGoingBgColor = 'bg-blue-500';
+	let incomingTextColor = 'text-zinc-900';
+	let outGoingTextColor = 'text-zinc-50';
+	let borderColor = 'border-zinc-900';
+	let loaderColor = 'bg-zinc-900';
 
 	let currentMessageIndex = -1;
 
 	afterUpdate(() => {
 		switch (userReply) {
-			case 'k':
+			case 'meh':
 				handlePageReply('🫠');
 				break;
-			case '❤️':
-				handlePageReply('👉👈');
+			case 'ok':
+				handlePageReply('🙂');
 				break;
-			case '💰':
-				handlePageReply('🙏');
+			case 'wow!':
+				handlePageReply('😎');
 				break;
 			default:
 				break;
@@ -64,8 +64,8 @@
 	}
 </script>
 
-<div class="p-4 text-center md:text-left">
-	<h2 class="mb-8 tanker text-5xl md:text-7xl">BACKGROUND</h2>
+<div class="p-4 md:text-left">
+	<h2 class="mb-8 tanker text-5xl md:text-7xl">CONTACT</h2>
 	<IntersectionObserver
 		element={chatElement}
 		bind:intersecting={chatIntersecting}
@@ -75,9 +75,9 @@
 			{#if currentMessageIndex >= 0}
 				<BackgroundChatMessage
 					layout="left"
-					{bgColor}
-					{txtColor}
-					loaderColor={background}
+					bgColor={incomingBgColor}
+					txtColor={incomingTextColor}
+					{loaderColor}
 					text={chatMessageCopy[0]}
 					imageUrl={`${IMAGE_URL}/${imageRequest('ross_2024.jpg', 200, 200)}`}
 					showTyping={true}
@@ -87,9 +87,9 @@
 			{#if currentMessageIndex >= 1}
 				<BackgroundChatMessage
 					layout="left"
-					{bgColor}
-					{txtColor}
-					loaderColor={background}
+					bgColor={incomingBgColor}
+					txtColor={incomingTextColor}
+					{loaderColor}
 					text={chatMessageCopy[1]}
 					imageUrl={`${IMAGE_URL}/${imageRequest('ross_2024.jpg', 200, 200)}`}
 					showTyping={true}
@@ -99,52 +99,53 @@
 			{#if currentMessageIndex >= 2}
 				<BackgroundChatMessage
 					layout="left"
-					{bgColor}
-					{txtColor}
-					loaderColor={background}
+					bgColor={incomingBgColor}
+					txtColor={incomingTextColor}
+					{loaderColor}
 					text={chatMessageCopy[2]}
 					imageUrl={`${IMAGE_URL}/${imageRequest('ross_2024.jpg', 200, 200)}`}
 					showTyping={true}
 					avatarAlt="ross cournoyer"
 				/>
 			{/if}
+			<!-- {#if awaitingReply && !userReply} -->
 			{#if awaitingReply}
 				<div class={`w-full h-12 flex px-2 justify-end satoshi-bold text-lg`}>
 					<button
 						type="button"
-						class={`w-[25%] max-w-[100px] my-auto ml-2 py-1 border-2 ${border} ${background} rounded-md cursor-pointer transition-colors duration-200 text-lg md:text-xl hover:${bgColor} hover:${txtColor}`}
+						class={`w-[25%] max-w-[100px] my-auto ml-2 py-1 border-2 ${borderColor} ${incomingBgColor} rounded-md cursor-pointer transition-colors duration-200 text-lg md:text-xl hover:${outGoingBgColor} hover:${outGoingTextColor}`}
 						on:click={() => {
-							handleUserReply('k');
+							handleUserReply('meh');
 						}}
 					>
-						k
+						meh 😏
 					</button>
 					<button
 						type="button"
-						class={`w-[25%] max-w-[100px] my-auto ml-2 py-1 border-2 ${border} ${background} rounded-md cursor-pointer transition-colors duration-200 md:text-lg hover:${bgColor} hover:${txtColor}`}
+						class={`w-[25%] max-w-[100px] my-auto ml-2 py-1 border-2 ${borderColor} ${incomingBgColor} rounded-md cursor-pointer transition-colors duration-200 md:text-lg hover:${outGoingBgColor} hover:${outGoingTextColor}`}
 						on:click={() => {
-							handleUserReply('❤️');
+							handleUserReply('ok');
 						}}
 					>
-						<p>❤️</p>
+						ok 😊
 					</button>
 					<button
 						type="button"
-						class={`w-[25%] max-w-[100px] my-auto ml-2 py-1 border-2 ${border} ${background} rounded-md cursor-pointer transition-colors duration-200 text-xl hover:${bgColor} hover:${txtColor}`}
+						class={`w-[25%] max-w-[100px] my-auto ml-2 py-1 border-2 ${borderColor} ${incomingBgColor} rounded-md cursor-pointer transition-colors duration-200 text-xl hover:${outGoingBgColor} hover:${outGoingTextColor}`}
 						on:click={() => {
-							handleUserReply('💰');
+							handleUserReply('wow!');
 						}}
 					>
-						<p>💰</p>
+						wow! 🤩
 					</button>
 				</div>
 			{/if}
 			{#if !awaitingReply && userReply}
 				<BackgroundChatMessage
 					layout="right"
-					{bgColor}
-					{txtColor}
-					loaderColor={background}
+					bgColor={outGoingBgColor}
+					txtColor={outGoingTextColor}
+					loaderColor="bg-zinc-50"
 					text={userReply}
 					imageUrl={businessGoose}
 					showTyping={false}
@@ -154,9 +155,9 @@
 			{#if userReply && pageReply}
 				<BackgroundChatMessage
 					layout="left"
-					{bgColor}
-					{txtColor}
-					loaderColor={background}
+					bgColor={incomingBgColor}
+					txtColor={incomingTextColor}
+					{loaderColor}
 					text={pageReply}
 					imageUrl={ross2024}
 					showTyping={true}
