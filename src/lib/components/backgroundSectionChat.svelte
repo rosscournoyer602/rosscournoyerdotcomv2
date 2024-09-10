@@ -58,14 +58,17 @@
 	}
 
 	function handlePageReply(value: string) {
-		setTimeout(() => {
-			pageReply = value;
-		}, 1000);
+		if (!pageReply) {
+			window.scrollTo(0, document.body.scrollHeight);
+			setTimeout(() => {
+				pageReply = value;
+			}, 1000);
+		}
 	}
 </script>
 
 <div class="p-4 md:text-left">
-	<h2 class="mb-8 tanker text-5xl md:text-7xl">CONTACT</h2>
+	<h2 class="mb-8 tanker text-5xl md:text-7xl">About Me</h2>
 	<IntersectionObserver
 		element={chatElement}
 		bind:intersecting={chatIntersecting}

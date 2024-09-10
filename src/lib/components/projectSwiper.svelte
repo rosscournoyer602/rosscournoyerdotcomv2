@@ -16,6 +16,7 @@
 	onMount(() => {
 		const swiperEl = document.querySelector('swiper-container');
 		const swiper = swiperEl?.swiper as Swiper;
+		projectSwiper = swiper;
 
 		swiper.on('slideChange', function (swiper) {
 			selectedIndex = swiper.activeIndex;
@@ -30,7 +31,7 @@
 </script>
 
 <div class="w-full h-full relative">
-	<div class="absolute mt-4 pl-4 top-0 left-0 z-10 mix-blend-luminosity">
+	<div class="absolute mt-4 pl-4 top-0 left-0 z-10 text-zinc-100">
 		<h2 class="tanker text-5xl md:text-7xl">Projects</h2>
 	</div>
 	<div class="pagination absolute mt-5 top-0 right-0 pr-4 z-10">
@@ -38,7 +39,7 @@
 			{#each projects as _, index}
 				<button
 					id={`pagination-${index}`}
-					class={`pagination__dot h-[16px] w-[16px] bg-white rounded-2xl transition-opacity duration-[1200ms] ${selectedIndex === index ? 'pagination-active' : 'pagination-inactive'}`}
+					class={`pagination__dot h-[16px] w-[16px] bg-zinc-100 rounded-2xl transition-opacity duration-[1200ms] ${selectedIndex === index ? 'pagination-active' : 'pagination-inactive'}`}
 					on:click={() => handlePaginationClick(index)}
 				/>
 			{/each}
@@ -48,7 +49,7 @@
 		class="h-full"
 		autoHeight={true}
 		speed={1200}
-		disableOnInteraction="true"
+		pauseOnMouseEnter={true}
 		slidesPerView={1}
 		autoplay={{
 			delay: 10000,
@@ -99,5 +100,32 @@
 
 	.pagination-active {
 		opacity: 1;
+	}
+
+	.twinkle {
+		animation: twinkle ease-in-out 2s 1;
+	}
+
+	@keyframes twinkle {
+		0% {
+			transform: scale(0.5);
+			opacity: 0;
+		}
+		30% {
+			transform: scale(1.5);
+			opacity: 1;
+		}
+		70% {
+			transform: scale(1.7);
+			opacity: 1;
+		}
+		95% {
+			transform: scale(1.5);
+			opacity: 1;
+		}
+		100% {
+			transform: scale(0.5);
+			opacity: 0;
+		}
 	}
 </style>

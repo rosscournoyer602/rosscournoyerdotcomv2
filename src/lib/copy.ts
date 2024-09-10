@@ -72,7 +72,7 @@ export const projects = [
 		tech: 'Vue 2, SCSS, Web Audio API',
 		alt: 'vue-sequencer-screenshot',
 		imageClasses: 'h-[300px] mt-4 mx-auto md:mx-0 md:h-[500px] md:mr-20',
-		colorClasses: 'bg-blue-300 text-slate-950 border-slate-950',
+		colorClasses: 'bg-blue-300 text-slate-900 border-slate-950',
 		gitRepo: 'https://github.com/rosscournoyer602/vue-sequencer',
 		demo: 'https://vue-sequencer.vercel.app/'
 	},
@@ -83,7 +83,7 @@ export const projects = [
 		tech: 'React, SCSS, Node, Postgres, Docker, AWS',
 		alt: 'photo-app-screenshot',
 		imageClasses: 'w-full md:w-2/3 md:max-h-[550px] md:max-w-[825px] md:self-center',
-		colorClasses: 'bg-lime-200 text-teal-800 border-amber-300',
+		colorClasses: 'bg-teal-900 text-sky-200 border-amber-300',
 		gitRepo: 'https://github.com/rosscournoyer602/photo-app-frontend',
 		demo: 'https://photo-app-frontend-v2.vercel.app/'
 	},
@@ -105,7 +105,7 @@ export const projects = [
 		tech: 'C',
 		alt: 'paycalc-screenshot',
 		imageClasses: 'w-full md:w-2/3 md:max-h-[550px] md:max-w-[825px] md:self-center',
-		colorClasses: 'bg-rose-800 text-fuchsia-200 border-yellow-400',
+		colorClasses: 'bg-rose-900 text-fuchsia-200 border-yellow-400',
 		gitRepo: 'https://github.com/rosscournoyer602/paycalc',
 		demo: ''
 	}
