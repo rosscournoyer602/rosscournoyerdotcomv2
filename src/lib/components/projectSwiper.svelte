@@ -40,6 +40,8 @@
 				<button
 					id={`pagination-${index}`}
 					class={`pagination__dot h-[16px] w-[16px] bg-zinc-100 rounded-2xl transition-opacity duration-[1200ms] ${selectedIndex === index ? 'pagination-active' : 'pagination-inactive'}`}
+					type="button"
+					value={index}
 					on:click={() => handlePaginationClick(index)}
 				/>
 			{/each}
@@ -63,7 +65,7 @@
 				<div class="h-full flex flex-col justify-between px-4">
 					<div>
 						<h2 class="tanker text-4xl text-center md:text-5xl">{project.name}</h2>
-						<p class="mt-2 satoshi-regular text-center md:text-2xl">{project.tech}</p>
+						<h4 class="mt-2 satoshi-regular text-center text-lg md:text-2xl">{project.tech}</h4>
 						<div class="md:flex md:justify-center md:gap-4 md:mt-12">
 							<img
 								class={`md:self-center ${project.imageClasses}`}
@@ -71,7 +73,7 @@
 								alt={project.alt}
 							/>
 							<div class="mt-4 md:mt-8 md:mr-4 md:text-xl md:w-1/3">
-								<p class="satoshi-bold indent-8 text-justify">
+								<p class="satoshi-bold indent-8 text-pretty hyphens-auto">
 									{projects[index].description}
 								</p>
 								<div class="flex flex-col text-center gap-4 mt-4 md:text-left md:mt-10">

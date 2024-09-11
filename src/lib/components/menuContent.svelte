@@ -5,7 +5,7 @@
 </script>
 
 <div class="w-full h-full flex justify-between">
-	<p class="self-center">Ross Cournoyer</p>
+	<h2 class="self-center">Ross Cournoyer</h2>
 	<div class="self-center">
 		<div class="h-full flex justify-between p-1 pr-0">
 			<a href="https://www.linkedin.com/in/rosscournoyer/" target="_blank">

@@ -32,7 +32,7 @@
 		class={`w-[360px] ${titleBgColor} absolute-center shadow-hero z-10 rounded-xl text-center md:w-[760px]`}
 	>
 		<h1 class="tanker text-6xl top-0 md:text-9xl">Ross Cournoyer</h1>
-		<p class="satoshi-bold text-2xl md:text-5xl">Very good web developer</p>
+		<h2 class="satoshi-bold text-2xl md:text-5xl">Very good web developer</h2>
 		<div class="w-full pt-2 flex justify-center satoshi-bold">
 			<a href="https://www.linkedin.com/in/rosscournoyer/" target="_blank">
 				<LogoLinkedin size={32} class={`${baseIconClasses} md:hidden`} />

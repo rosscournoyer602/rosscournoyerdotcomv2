@@ -90,7 +90,7 @@ export const projects = [
 	{
 		name: 'rosscournoyer.com (v2)',
 		description:
-			"This website. I made the latest version of my portfolio with SvelteKit and Tailwind. I have to say its probably my favorite web framework now. It feels very intuitive to manage state, component lifecycle as well as abstracting and reusing components. This being a simple-ish page, there is more to explore in the framework. But I can't wait to use it again.",
+			"This website. I made the latest version of my portfolio with SvelteKit and Tailwind. I have to say its probably my favorite web framework now. It feels very intuitive to manage state, component lifecycle as well as abstracting and reusing components. This being a simple page, there is more to explore in the framework. But I can't wait to use it again.",
 		tech: 'Svelte, Tailwind, Vite',
 		alt: 'portfolio-screenshot',
 		imageClasses: 'w-full md:w-2/3 md:max-h-[550px] md:max-w-[825px] md:self-center',
