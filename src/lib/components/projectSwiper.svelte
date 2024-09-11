@@ -65,7 +65,7 @@
 				<div class="h-full flex flex-col justify-between px-4">
 					<div>
 						<h2 class="tanker text-4xl text-center md:text-5xl">{project.name}</h2>
-						<h4 class="mt-2 satoshi-regular text-center text-lg md:text-2xl">{project.tech}</h4>
+						<h3 class="mt-2 satoshi-regular text-center text-lg md:text-2xl">{project.tech}</h3>
 						<div class="md:flex md:justify-center md:gap-4 md:mt-12">
 							<img
 								class={`md:self-center ${project.imageClasses}`}

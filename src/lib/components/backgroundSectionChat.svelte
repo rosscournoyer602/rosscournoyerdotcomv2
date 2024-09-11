@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { imageRequest } from '$lib/imageRequest';
-	import { chatMessageCopy, IMAGE_URL } from '$lib/config';
+	import { IMAGE_URL } from '$lib/config';
 	import BackgroundChatMessage from './backgroundChatMessage.svelte';
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import { afterUpdate } from 'svelte';
+	import { chatMessageCopy } from '$lib/copy';
 
 	import businessGoose from '$lib/assets/business-goose.webp';
 	import ross2024 from '$lib/assets/ross_2024.webp';
