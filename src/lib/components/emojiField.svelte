@@ -12,7 +12,18 @@
 	let interval: number;
 
 	function emoji() {
-		return randomEmoji.generateEmojis(1)[0].image;
+		const emoji = randomEmoji.generateEmojis(1)[0];
+		if (
+			emoji.name === 'middle finger' ||
+			emoji.name === 'eggplant' ||
+			// no offense to anyone, but these flags wont be on my page until the wars end
+			emoji.name === 'flag: Russia' ||
+			emoji.name === 'flag: Israel'
+		) {
+			return '👮';
+		}
+
+		return emoji.image;
 	}
 
 	function destination() {
