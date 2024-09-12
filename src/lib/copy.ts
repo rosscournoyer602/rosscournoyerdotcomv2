@@ -31,15 +31,22 @@ export const jobs = [
 		order: 5,
 		company: 'General Motors',
 		title: 'Full-stack developer',
-		dates: 'Jan 2022  - Nov 2023',
+		dates: 'Jan 2022 - Nov 2023',
 		url: 'https://www.gm.com/'
 	},
 	{
 		order: 6,
 		company: 'Nikola Corporation',
 		title: 'Full-stack developer',
-		dates: 'Nov 2023 - Aug 2024',
+		dates: 'Nov 2023 - Jul 2024',
 		url: 'https://www.nikolamotor.com'
+	},
+	{
+		order: 7,
+		company: 'BCBSAZ',
+		title: 'Software Developer',
+		dates: 'Jul 2024 - Present',
+		url: 'https://www.azblue.com/'
 	}
 ];
 
