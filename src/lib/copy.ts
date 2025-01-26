@@ -58,7 +58,7 @@ export const jobs = [
 ];
 
 export const chatMessageCopy = [
-	'Hi, I’m Ross. I am a web developer from Arizona. I lived in Shanghai for 11 years, which is where I got my start in software. I am back in Phoenix now, and have been working in software development for a little over 6 years now. Time flies!',
+	'Hi, I’m Ross. I am a web developer from Arizona. I lived in Shanghai for 11 years, which is where I got my start in software. I am back in Phoenix now, and have been working in software development for a little over 7 years now. Time flies!',
 	'I am most skilled with Javascript front-end frameworks like React.js or Vue.js, but I also have done some work with Flutter as well as Ruby on Rails. I have some professional experience with Node.js, Java, and Python for API development as well.',
 	'When I am not coding, I enjoy snowboarding, bouldering, mountain biking, and gaming. Thanks for visiting my site. 😊'
 ];
@@ -88,7 +88,7 @@ export const projects = [
 	{
 		name: 'Vue Sequencer',
 		description:
-			"Back in 2019 I wanted to learn some Vue, so I made this drum machine app. I struggled with browser compatibility until I refactored it to use the Web Audio API. Now it sounds great on any device. I'll come back and spruce up the styling some day. It's a lot of fun as-is! You can use it to make some sick beats.",
+			'Back in 2019 I wanted to learn some Vue, so I made this drum machine app. I struggled with browser compatibility until I refactored it to use the Web Audio API. Now it sounds great on any device. It is really fun, try making some music with it!',
 		tech: 'Vue 2, SCSS, Web Audio API',
 		alt: 'vue-sequencer-screenshot',
 		imageClasses: 'h-[300px] mt-4 mx-auto md:mx-0 md:h-[500px] md:mr-20',
@@ -99,7 +99,7 @@ export const projects = [
 	{
 		name: 'Photo app',
 		description:
-			'A takehome tech-screen project for my job at Wiredcraft. The tast was do style a mosaic pattern and lazy-load the images. I use it to test other features I want to learn. For example, I added JWT auth and the ability to save your favorite photos. This project was a great opportunity to build out my backend boilerplate and learn AWS. The profile images are served from a serverless image handler made with S3, Lambda, Sharp, and Cloudfront.',
+			'A takehome tech-screen project for my job at Wiredcraft. The original task was to style a mosaic pattern and lazy-load the images. I later added a backend API to serve the image urls and provide JWT authentication. The user profile images are fetched from a dynamic image resizer made with S3, Lambda, Sharp, and Cloudfront.',
 		tech: 'React, SCSS, Node, Postgres, Docker, AWS',
 		alt: 'photo-app-screenshot',
 		imageClasses: 'w-full md:w-2/3 md:max-h-[550px] md:max-w-[825px] md:self-center',
@@ -110,7 +110,7 @@ export const projects = [
 	{
 		name: 'rosscournoyer.com (v2)',
 		description:
-			'This website. I made the latest version of my portfolio with SvelteKit and Tailwind. I have to say its probably my favorite web framework now. It feels very intuitive to manage state, component lifecycle as well as abstracting and reusing components. This being a simple page, there is more to explore in the framework. In the future I might explore using a CMS for the content.',
+			'This website. I made the latest version of my portfolio with SvelteKit and Tailwind. Svelte is probably my favorite web framework now. It feels very intuitive to manage state and component lifecycle, as well as abstracting and reusing components. The source code is available on my Github.',
 		tech: 'Svelte, Tailwind, Vite',
 		alt: 'portfolio-screenshot',
 		imageClasses: 'w-full md:w-2/3 md:max-h-[550px] md:max-w-[825px] md:self-center',
