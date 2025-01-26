@@ -73,7 +73,7 @@
 								alt={project.alt}
 							/>
 							<div class="mt-4 md:mt-8 md:mr-4 md:text-xl md:w-1/3">
-								<p class="satoshi-bold indent-8 text-pretty hyphens-auto">
+								<p class="satoshi-bold text-pretty hyphens-auto">
 									{projects[index].description}
 								</p>
 								<div class="flex flex-col text-center gap-4 mt-4 md:text-left md:mt-10">
