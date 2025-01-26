@@ -69,7 +69,13 @@
 </script>
 
 <div class="p-4 md:text-left">
-	<h2 class="mb-8 tanker text-5xl md:text-7xl">About Me</h2>
+	<div class="flex">
+		<h2 class="mb-8 tanker text-5xl md:text-7xl">About Me</h2>
+		<div class="flex">
+			<img class="w-[12px] h-[12px] opacity-0" src={businessGoose} alt="hidden-goose-preload" />
+			<img class="w-[12px] h-[12px] opacity-0" src={ross2024} alt="hidden-ross-preload" />
+		</div>
+	</div>
 	<IntersectionObserver
 		element={chatElement}
 		bind:intersecting={chatIntersecting}
