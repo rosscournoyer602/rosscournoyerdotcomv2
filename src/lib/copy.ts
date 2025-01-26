@@ -44,9 +44,16 @@ export const jobs = [
 	{
 		order: 7,
 		company: 'BCBSAZ',
-		title: 'Software Developer',
-		dates: 'Jul 2024 - Present',
+		title: 'Full-stack developer',
+		dates: 'Jul 2024 - Nov 2024',
 		url: 'https://www.azblue.com/'
+	},
+	{
+		order: 8,
+		company: 'American Express',
+		title: 'Full-stack developer',
+		dates: 'Nov 2024 - Present',
+		url: 'https://www.americanexpress.com/'
 	}
 ];
 
